@@ -11,14 +11,8 @@ This is the cart page.proceed to review your items and place your order
 {% if not cart_items %}
  <div>
      <div class="text-center">
-         <br>
-         <h1> class="text-center my_title">
-             Your Shopping Cart is Empty
-         </h1>
-         <br>
          <p class="text-center">
              Please Click <a href="{% url 'shopapp:allProdCat' %}">Here</a>to continue shopping.
-
          </p>
      </div>
  </div>
@@ -45,7 +39,7 @@ This is the cart page.proceed to review your items and place your order
             {% for cart_item in cart_items %}
             <tr>
                 <td>
-                    <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" alt="" style="width;200px;height:200px;" class="float-left rounded custom_image"height="250px;" width="250px;"></a>
+                    <a href="cart_item.product.get_absolute_url"><img src="{{cart_item.product.image.url}}" alt="" style="width;200px;height;200px;" class="float-left rounded custom_image"height="250px;" width="250px;"></a>
                 </td>
                 <td class="text-left">
                     {{cart_item.product.name}}
@@ -101,6 +95,7 @@ This is the cart page.proceed to review your items and place your order
     </table>
     <div class="mx-auto">
         <a href="{% url 'shopapp:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Continue Shopping</a>
+        <a href="{% url 'shopapp:allProdCat' %}" class="btn btn-secondary btn-block my_custom_button">Make Payment</a>
 </div>
 
     {% endif %}
